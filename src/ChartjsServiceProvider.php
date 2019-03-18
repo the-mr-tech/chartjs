@@ -23,6 +23,8 @@ class ChartjsServiceProvider extends ServiceProvider
             );
         }
 
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'adminchartjs');
+
         Admin::booting(function () {
             Admin::js('vendor/laravel-admin-ext/chartjs/Chart.bundle.min.js');
         });
