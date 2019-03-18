@@ -16,6 +16,9 @@ class ChartjsBox extends Box
         parent::__construct($title, $content);
     }
 
+    /**
+     * @return string
+     */
     public function render()
     {
         if (!$this->id)
@@ -34,6 +37,6 @@ class ChartjsBox extends Box
             'options' => $this->options
         ]));
 
-        return $this;
+        return parent::render();
     }
 }
